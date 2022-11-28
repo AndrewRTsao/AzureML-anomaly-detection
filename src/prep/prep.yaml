@@ -1,0 +1,19 @@
+name: prepare_data
+description: Prune training dataset to include only relevant columns and ensure all values are numeric for pyod / numpy
+display_name: Prepare training dataset
+version: 1
+type: command
+inputs:
+  raw_data: 
+    type: uri_file
+outputs:
+  prep_data:
+    type: uri_folder
+code: ./
+environment: 
+  conda_file: ./conda.yaml
+  image: mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu20.04
+command: >-
+  python prep_component.py 
+  --raw_data ${{inputs.raw_data}} 
+  --prep_data ${{outputs.prep_data}}

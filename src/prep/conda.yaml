@@ -1,0 +1,9 @@
+name: anomaly_detection_prep_env
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - pip:
+    - mldesigner
+    - pandas
+    - numpy

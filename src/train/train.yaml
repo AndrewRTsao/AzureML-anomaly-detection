@@ -1,0 +1,19 @@
+name: train_anomaly_detection_model
+description: Train anomaly detection model using pyod library and selected algorithm / hyperparameters
+display_name: TrainPyodAnomalyDetection
+version: 1
+type: command
+inputs:
+  training_data: 
+    type: uri_folder
+outputs:
+  model_output:
+    type: uri_file
+code: ./
+environment: 
+  conda_file: ./conda.yaml
+  image: mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu20.04
+command: >-
+  python train_component.py 
+  --training_data ${{inputs.training_data}} 
+  --model_output ${{outputs.model_output}}
