@@ -18,7 +18,7 @@ pip install --trusted-host pypip.python.org -r requirements.txt
 az ad sp create-for-rbac -n test-account --role Owner --scopes /subscriptions/<subscription_ID>
 ```
 
-*NOTE: Make a note of the output here, which you will need for the next step (appID = client_ID, password = client_secret).*
+*NOTE: Note the output, which will help with the next step (appID = client_ID, password = client_secret).*
 
 4. Fill out the environment variables in **env.sh** and source the file.
 
@@ -36,9 +36,9 @@ source env.sh
 python run_pipeline.py
 ```
 
-*NOTE: Pipeline will take approximately 30 minutes to one hour to complete*
+*NOTE: Pipeline will take approximately 30 minutes to one hour to complete.*
 
-6. (Optional) If you would like, run the **cleanup.py** script once you're done and/or if you don't need the underlying pipeline assets / resources anymore.
+6. (Optional) If you would like, run the **cleanup.py** script once you're done or if you don't need the underlying pipeline assets / resources anymore.
 
 ```sh
 python cleanup.py
