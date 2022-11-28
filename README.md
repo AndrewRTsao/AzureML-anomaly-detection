@@ -36,7 +36,7 @@ source env.sh
 python run_pipeline.py
 ```
 
-*NOTE: Pipeline will take approximately 1-2 hours to complete*
+*NOTE: Pipeline will take approximately 30 minutes to one hour to complete*
 
 6. (Optional) If you would like, run the **cleanup.py** script once you're done and/or if you don't need the underlying pipeline assets / resources anymore.
 
